@@ -1,0 +1,33 @@
+{
+	"images": {
+		"lobotomy": [
+			"images/diagram-showing-walter-freemans-transorbital-lobotomy-x.jpg",
+			"images/lobotomy-1.jpg",
+			"images/frontal-leukotomy-axial-t2.png",
+			"images/frontal-leukotomy-coronal-t2.png",
+			"images/frontal-leukotomy-sagittal-flair.png",
+			"images/frontal-leukotomy-sagittal-t1.png",
+			"images/frontal-leukotomy-sagittal-t1-2.png"
+		],
+		"heaven": [
+			"images/heaven1.jpg",
+			"images/heaven2.jpg",
+			"images/heaven3.jpg",
+			"images/heaven4.jpg",
+			"images/heaven5.jpg",
+			"images/heaven6.jpg"
+		],
+		"unsettling": [
+			"images/uncanny-valley-girl",
+			"images/telenoid-robot.png",
+			"images/tiantan2.jpg"
+		],
+		"jesus": "images/Jesus-Christ.png"
+	},
+	"sounds": {
+		"lobotomy": "sounds/lobotomy-sound-effect.mp3",
+		"heaven": "sounds/heaven-bell.mp3",
+		"unsettling": "sounds/air-leaking.mp3",
+		"jesus": "sounds/dogma-angel-transform-end.wav"
+	}
+}
