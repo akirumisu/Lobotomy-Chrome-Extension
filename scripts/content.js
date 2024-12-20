@@ -50,7 +50,7 @@ function initialization(preset) {
     tier3Odds = 0.30;
     jesusOdds = 0.333; // 33.3%
   } else if (preset === "insane+") {
-    eventFrequency = 7; // ~7 seconds
+    eventFrequency = 9; // ~9 seconds
     tier1Odds = 0.10;
     tier2Odds = 0.30;
     tier3Odds = 0.60;
@@ -104,10 +104,10 @@ function lobotomyEventHandler() {
     tier1Event();
   } else if (i <= (tier1Odds + tier2Odds)) {
     console.log("Tier 2 Event")
-    tier1Event(); //tier2Event();
+    tier2Event();
   } else {
     console.log("Tier 3 Event")
-    tier1Event(); //tier3Event();
+    tier2Event(); //tier3Event();
   }
 }
 
@@ -128,7 +128,28 @@ function tier1Event() {
   }
 
   soundEffect.volume = videoVolume/100;
-  console.log(soundEffect.volume);
+  soundEffect.play();
+
+  lobotomyClock();
+}
+
+function tier2Event() {
+  videoVolume = document.querySelector('.ytp-volume-panel').ariaValueNow; // gets the volume from YouTube (0-100)
+  let soundEffect;
+
+  let i = Math.random();
+  if (i <= 0.33) {
+    displayImage(lobotomyImages[Math.floor(Math.random()*lobotomyImages.length)]);
+    soundEffect = new Audio(lobotomySound);
+  } else if (i <= 0.80) {
+    displayImage(heavenImages[Math.floor(Math.random()*heavenImages.length)]);
+    soundEffect = new Audio(heavenSound);
+  } else {
+    displayImage(unsettlingImages[Math.floor(Math.random()*unsettlingImages.length)]);
+    soundEffect = new Audio(unsettlingSound);
+  }
+
+  soundEffect.volume = videoVolume/100;
   soundEffect.play();
 
   lobotomyClock();
